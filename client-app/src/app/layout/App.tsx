@@ -3,6 +3,7 @@ import Navbar from "./Navbar.tsx";
 import { observer } from "mobx-react-lite";
 import {Outlet, useLocation} from "react-router-dom";
 import HomePage from "../../features/home/HomePage.tsx";
+import {ToastContainer} from "react-toastify";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     
   return (
     <>
+        <ToastContainer position={'bottom-right'} hideProgressBar={true} theme={'colored'} />
         {location.pathname === '/' ? <HomePage />: (
             <>
                 <Navbar />
